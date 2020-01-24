@@ -11,11 +11,20 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import {MaterialModule} from './material.module';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { FooterComponent } from './footer/footer.component';
+import { MainContainerComponent } from './main-container/main-container.component';
+import { CalendarDisplayComponent } from './calendar-display/calendar-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent
+    SidebarComponent,
+    MainNavComponent,
+    FooterComponent,
+    MainContainerComponent,
+    CalendarDisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +35,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

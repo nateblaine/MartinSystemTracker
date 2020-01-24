@@ -1,0 +1,43 @@
+
+<div class="bg-blue-500
+            text-center">
+
+  <h1 class="text-3xl pt-4">
+    Welcome to {{title}}!
+  </h1>
+  <button mat-button (click)="sidenav.toggle()" *ngIf="!sidenav.opened"
+          class="button-position
+                 add-button-color" >
+    <i class="material-icons">menu</i>
+    Open
+  </button>
+  <button mat-button (click)="sidenav.toggle()" *ngIf="sidenav.opened"
+          class="button-position
+                 add-button-color" >
+    <i class="material-icons">close</i>
+    Close
+  </button>
+
+</div>
+
+<!--Larger container for slide out and main area-->
+<mat-sidenav-container
+  (backdropClick)="close('backdrop')"
+  class="sidenav-container
+          "  >
+
+<!--  Slide out menu components go in here-->
+  <mat-sidenav #sidenav
+               disableClose
+               class="w-1/3
+                      ">
+    <app-sidebar class="m-3"></app-sidebar>
+  </mat-sidenav>
+
+<!--  Main area for habit tracking components-->
+  <mat-sidenav-content class="fixed
+                              " >
+  <app-main-container></app-main-container>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
